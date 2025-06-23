@@ -1,46 +1,37 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-    height: 100vh;
     font-family: 'Roboto', sans-serif;
     color: #fff;
     background: linear-gradient(135deg, #08000f, #200036);
+    background-attachment: fixed; /* fixa o gradiente durante o scroll */
+    background-repeat: no-repeat;
+    background-size: cover; /* cobre toda a área */
     overflow-x: hidden;
     position: relative;
 }
 
-/* Estrelas */
-.stars {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: white;
-    border-radius: 50%;
-    opacity: 0.7;
-}
-
-.star1 { top: 10%; left: 20%; }
-.star2 { top: 30%; left: 70%; }
-.star3 { top: 50%; left: 40%; }
-.star4 { top: 80%; left: 10%; }
-.star5 { top: 60%; left: 90%; }
-.star6 { top: 25%; left: 50%; }
-.star7 { top: 75%; left: 30%; }
-.star8 { top: 40%; left: 80%; }
-.star9 { top: 15%; left: 60%; }
-.star10 { top: 85%; left: 50%; }
-
 /* Hero Section */
 .hero-section {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
-    padding: 10px 20px;
+    padding: 40px 20px;
+    /* background: rgba(63, 0, 127, 0.6); */
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 1px 4px 10px #7f00ff;
 }
 
 .hero-section h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 3rem;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px #7f00ff, 0 0 20px #9f4fff;
+    text-shadow: 0 0 8px #7f00ff, 0 0 15px #9f4fff;
     color: #fff;
 }
 
@@ -83,8 +74,7 @@ body {
 /* Redes Sociais + Botão */
 .social-section {
     text-align: center;
-    margin-top: 1px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     position: relative;
     z-index: 1;
 }
@@ -128,19 +118,19 @@ body {
 
 /* Carrossel de Tecnologias */
 .tech-carousel {
-    overflow: visible; /* Antes estava hidden */
+    overflow: visible;
     white-space: nowrap;
     position: relative;
     margin: 40px 0;
-    padding: 0 20px; /* Pequeno espaço para sobra do hover */
+    padding: 0 20px;
 }
 
 .carousel-track {
     display: flex;
     gap: 40px;
-    animation: scroll 60s linear infinite; /* gira lentamente por 60s */
+    animation: scroll 60s linear infinite;  /* 🚀 Animação infinita e lenta */
     align-items: center;
-    width: max-content; /* garante largura total do conteúdo */
+    width: max-content;
 }
 
 .tooltip {
@@ -150,8 +140,8 @@ body {
     flex-shrink: 0;
     width: 60px;
     height: 60px;
-    padding: 10px; /* espaço extra dentro da tooltip para não cortar o hover */
-    box-sizing: content-box; /* garante que padding não diminua a área da imagem */
+    padding: 10px;
+    box-sizing: content-box;
 }
 
 .carousel-track img {
@@ -165,10 +155,9 @@ body {
 .carousel-track img:hover {
     transform: scale(1.3);
     filter: drop-shadow(0 0 15px #d47aff) drop-shadow(0 0 20px #d47aff);
-    z-index: 5; /* para garantir que fique na frente */
+    z-index: 5;
     position: relative;
 }
-
 
 /* Tooltip Text */
 .tooltip .tooltiptext {
@@ -203,12 +192,388 @@ body {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%); /* metade do conteúdo para loop infinito */
+        transform: translateX(-50%);
     }
 }
-
 
 /* Remove fundo brilhante do carrossel */
 .tech-carousel::before {
     content: none;
+}
+
+/* Mantém o fundo do body visível, sem fundo sólido nas seções */
+.services-section,
+.projects-section,
+.contact-section,
+.about-me {
+  background: transparent; /* sem cor de fundo para deixar o gradiente aparecer */
+  border-radius: 12px;
+  padding: 40px 20px; /* espaço interno, pode ajustar */
+  margin: 40px 20px;  /* espaço entre as seções para o fundo aparecer */
+  box-shadow: 0 0 25px rgba(127, 0, 255, 0.3); /* destaque com sombra */
+  position: relative;
+  z-index: 1;
+  color: #ddd; /* texto claro para contraste */
+}
+
+/* Se quiser, pode manter título igual */
+.services-section h2,
+.projects-section h2,
+.contact-section h2,
+.about-me h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff;
+  text-shadow: 0 0 10px #7f00ff, 0 0 20px #9f4fff;
+  text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 0 15px rgba(127, 0, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 25px rgba(127, 0, 255, 0.5);
+}
+
+.service-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 5px #9f4fff);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(127, 0, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: #fff;
+    text-align: left;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.project-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Fundo translúcido com gradiente roxo e blur para efeito fumaça */
+    background: linear-gradient(135deg, rgba(127, 0, 255, 0.3), rgba(63, 0, 127, 0.4));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    border-radius: 15px; /* mantém borda arredondada */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(127, 0, 255, 0.6);
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-card:hover .project-info {
+    opacity: 1;
+}
+
+.project-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+}
+
+.project-info p {
+    margin: 0 0 20px 0;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+/* Ícone de clique (seta para a direita) */
+.project-info::after {
+    content: "➔";
+    font-size: 2rem;
+    color: #fff;
+    opacity: 0.8;
+    animation: bounce 1.5s infinite;
+    margin-top: 10px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 40px auto 80px auto;
+  padding: 60px 20px;
+  background: rgba(40, 0, 70, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(127, 0, 255, 0.3);
+  color: #ddd;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+  color: #9f4fff;
+  text-shadow: 0 0 8px #9f4fff;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #ddd;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 2px solid #7f00ff;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #eee;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d47aff;
+  outline: none;
+  background: rgba(31, 0, 55, 0.7);
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  background: #7f00ff;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 15px 0;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #7f00ff;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.contact-form button:hover {
+  background: #9f4fff;
+  box-shadow: 0 0 22px #9f4fff;
+}
+
+.about-me {
+  max-width: 700px;
+  margin: 40px auto 80px auto;
+  background: rgba(40, 0, 70, 0.6);
+  padding: 60px 30px;
+  border-radius: 12px;
+  color: #ddd;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 0 25px rgba(127, 0, 255, 0.3);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.about-me h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #9f4fff;
+  text-shadow: 0 0 10px #7f00ff;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.more-text {
+  display: none;
+}
+
+#toggleAboutBtn {
+  background-color: #7f00ff;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #9f4fff;
+  transition: background-color 0.3s ease;
+}
+
+#toggleAboutBtn:hover {
+  background-color: #9f4fff;
+}
+
+/* Estrelas - containers das camadas */
+.stars {
+  position: fixed; /* fixa na tela para parallax funcionar */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; /* altura da viewport para limitar */
+  pointer-events: none;
+  overflow: visible; /* para mostrar estrelas que saiam da viewport */
+  z-index: 0;
+}
+
+/* Camadas com transparências e cores variadas para profundidade */
+/* Opacidade e cor diferentes por camada para profundidade */
+.layer1 .star {
+  opacity: 0.3;
+  background: white;
+  filter: drop-shadow(0 0 1px #fff);
+}
+
+.layer2 .star {
+  opacity: 0.5;
+  background: #e0e0ff;
+  filter: drop-shadow(0 0 1.5px #bbb);
+}
+
+.layer3 .star {
+  opacity: 0.8;
+  background: #fff;
+  filter: drop-shadow(0 0 2px #aaa);
+}
+
+
+/* Cada estrela individual */
+.star {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  min-width: 1px;
+  min-height: 1px;
+  background: white; /* padrão, pode ser sobrescrito por camada */
+  opacity: 0.7; /* padrão */
+  filter: drop-shadow(0 0 1px #fff);
+  transition: transform 0.2s ease-out;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.star {
+  animation-name: blink;
+  animation-duration: 4s; /* duração da animação */
+  animation-iteration-count: infinite; /* repetir sempre */
+  animation-timing-function: ease-in-out; /* suavizar */
+}
+
+.spaceship {
+  position: fixed;
+  top: 20%; /* posição vertical, pode ajustar */
+  left: -100px; /* começa fora da tela à esquerda */
+  width: 80px;
+  height: 80px;
+  background-image: url('./Imagens/ovni.png'); /* link de uma nave simples */
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: flyRight 25s linear infinite;
+  z-index: 10; /* fica na frente das estrelas */
+}
+
+@keyframes flyRight {
+  0% {
+    left: -100px;
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 110vw; /* sai da tela à direita */
+    opacity: 0;
+  }
 }
