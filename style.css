@@ -554,7 +554,7 @@ body {
   left: -100px; /* começa fora da tela à esquerda */
   width: 80px;
   height: 80px;
-  background-image: url('./Imagens/ovni.png'); /* link de uma nave simples */
+  background-image: url('/portfolio-do-alien/Imagens/ovni.png'); /* link de uma nave simples */
   background-size: contain;
   background-repeat: no-repeat;
   animation: flyRight 25s linear infinite;
