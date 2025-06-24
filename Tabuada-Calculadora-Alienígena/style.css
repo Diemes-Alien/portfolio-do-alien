@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    padding: 20px;
+  }
+  
+  #resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  .alien-mode {
+    background-color: #0d0221;
+    color: #39ff14;
+  }
+  
+  .alien-mode #resultado {
+    border: 1px solid #39ff14;
+    padding: 15px;
+    background-color: #1b0032;
+  }
+  
+  .tabuada-resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  .alien-mode .tabuada-resultado {
+    border: 1px solid #39ff14;
+    padding: 15px;
+    background-color: #1b0032;
+    color: #39ff14;
+  }
+  

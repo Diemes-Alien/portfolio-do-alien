@@ -1,3 +1,4 @@
+/* ===================== RESET & GLOBAL STYLES ===================== */
 *,
 *::before,
 *::after {
@@ -5,203 +6,207 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
-    background: linear-gradient(135deg, #08000f, #200036);
-    background-attachment: fixed; /* fixa o gradiente durante o scroll */
-    background-repeat: no-repeat;
-    background-size: cover; /* cobre toda a área */
-    overflow-x: hidden;
-    position: relative;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #08000f, #200036);
+  background-attachment: fixed; /* fixa o gradiente durante o scroll */
+  background-repeat: no-repeat;
+  background-size: cover; /* cobre toda a área */
+  overflow-x: hidden;
+  position: relative;
 }
 
-/* Hero Section */
+/* ===================== HERO SECTION ===================== */
 .hero-section {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 40px 20px;
-    /* background: rgba(63, 0, 127, 0.6); */
-    border-radius: 12px;
-    margin: 20px 0;
-    box-shadow: 1px 4px 10px #7f00ff;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 40px 20px;
+  /* background: rgba(63, 0, 127, 0.6); */
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 1px 4px 10px #7f00ff;
 }
 
 .hero-section h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-shadow: 0 0 8px #7f00ff, 0 0 15px #9f4fff;
-    color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #7f00ff, 0 0 15px #9f4fff;
+  color: #fff;
 }
 
 .hero-section p {
-    font-size: 1.2rem;
-    color: #ddd;
-    margin-bottom: 0;
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 0;
 }
 
 /* Texto com efeito de digitação */
 .typing-text {
-    font-size: 1.5rem;
-    color: #ddd;
-    min-height: 80px;
-    max-width: 600px;
-    margin: 0 auto 5px auto;
-    white-space: normal;
-    overflow: visible;
-    position: relative;
-    word-wrap: break-word;
-    padding-right: 10px;
+  font-size: 1.5rem;
+  color: #ddd;
+  min-height: 80px;
+  max-width: 600px;
+  margin: 0 auto 5px auto;
+  white-space: normal;
+  overflow: visible;
+  position: relative;
+  word-wrap: break-word;
+  padding-right: 10px;
 }
 
 .typing-text::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0%;
-    width: 3px;
-    height: 60%;
-    background-color: #9f4fff;
-    animation: blink 1s steps(2, start) infinite;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0%;
+  width: 3px;
+  height: 60%;
+  background-color: #9f4fff;
+  animation: blink 1s steps(2, start) infinite;
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
-/* Redes Sociais + Botão */
+/* ===================== SOCIAL SECTION ===================== */
 .social-section {
-    text-align: center;
-    margin-bottom: 50px;
-    position: relative;
-    z-index: 1;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
 }
 
 .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;
 }
 
 .social-icons a img {
-    width: 40px;
-    height: 40px;
-    filter: brightness(0) invert(1);
-    transition: filter 0.3s ease, transform 0.3s ease;
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover img {
-    filter: brightness(0) invert(0.6) sepia(1) saturate(5) hue-rotate(270deg);
-    transform: scale(1.2);
+  filter: brightness(0) invert(0.6) sepia(1) saturate(5) hue-rotate(270deg);
+  transform: scale(1.2);
 }
 
 .btn-download {
-    background: #7f00ff;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    box-shadow: 0 0 10px #7f00ff;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
+  background: #7f00ff;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px #7f00ff;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
 }
 
 .btn-download:hover {
-    background: #9f4fff;
-    box-shadow: 0 0 20px #9f4fff;
+  background: #9f4fff;
+  box-shadow: 0 0 20px #9f4fff;
 }
 
-/* Carrossel de Tecnologias */
+/* ===================== TECHNOLOGIES CAROUSEL ===================== */
 .tech-carousel {
-    overflow: visible;
-    white-space: nowrap;
-    position: relative;
-    margin: 40px 0;
-    padding: 0 20px;
+  overflow: visible;
+  white-space: nowrap;
+  position: relative;
+  margin: 40px 0;
+  padding: 0 20px;
 }
 
 .carousel-track {
-    display: flex;
-    gap: 40px;
-    animation: scroll 60s linear infinite;  /* 🚀 Animação infinita e lenta */
-    align-items: center;
-    width: max-content;
+  display: flex;
+  gap: 40px;
+  animation: scroll 60s linear infinite;  /* 🚀 Animação infinita e lenta */
+  align-items: center;
+  width: max-content;
 }
 
 .tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: default;
-    flex-shrink: 0;
-    width: 60px;
-    height: 60px;
-    padding: 10px;
-    box-sizing: content-box;
+  position: relative;
+  display: inline-block;
+  cursor: default;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  box-sizing: content-box;
 }
 
 .carousel-track img {
-    width: 60px;
-    height: 60px;
-    filter: drop-shadow(0 0 10px #9f4fff);
-    transition: transform 0.3s ease, filter 0.3s ease;
-    flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  filter: drop-shadow(0 0 10px #9f4fff);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  flex-shrink: 0;
 }
 
 .carousel-track img:hover {
-    transform: scale(1.3);
-    filter: drop-shadow(0 0 15px #d47aff) drop-shadow(0 0 20px #d47aff);
-    z-index: 5;
-    position: relative;
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 15px #d47aff) drop-shadow(0 0 20px #d47aff);
+  z-index: 5;
+  position: relative;
 }
 
 /* Tooltip Text */
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: max-content;
-    background-color: #7f00ff;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 10px;
-    position: absolute;
-    z-index: 10;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    box-shadow: 0 0 8px #7f00ff;
-    pointer-events: none;
+  visibility: hidden;
+  width: max-content;
+  background-color: #7f00ff;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  box-shadow: 0 0 8px #7f00ff;
+  pointer-events: none;
 }
 
 .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Animação do Carrossel */
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Remove fundo brilhante do carrossel */
 .tech-carousel::before {
-    content: none;
+  content: none;
 }
 
-/* Mantém o fundo do body visível, sem fundo sólido nas seções */
+/* ===================== SECTIONS BASE STYLES ===================== */
 .services-section,
 .projects-section,
 .contact-section,
@@ -216,7 +221,6 @@ body {
   color: #ddd; /* texto claro para contraste */
 }
 
-/* Se quiser, pode manter título igual */
 .services-section h2,
 .projects-section h2,
 .contact-section h2,
@@ -229,141 +233,208 @@ body {
   text-align: center;
 }
 
+/* ===================== SERVICES SECTION ===================== */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .service-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 30px 20px;
-    box-shadow: 0 0 15px rgba(127, 0, 255, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 0 15px rgba(127, 0, 255, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
 
 .service-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 0 25px rgba(127, 0, 255, 0.5);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 25px rgba(127, 0, 255, 0.5);
 }
 
 .service-card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-    filter: drop-shadow(0 0 5px #9f4fff);
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 5px #9f4fff);
 }
 
 .service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .service-card p {
-    color: #ccc;
-    font-size: 1rem;
+  color: #ccc;
+  font-size: 1rem;
 }
 
+/* ========== PROJECTS SECTION SIMPLIFICADA COM TÍTULO INTEIRO CENTRALIZADO ========== */
+
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .project-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(127, 0, 255, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-decoration: none;
-    color: #fff;
-    text-align: left;
-}
-
-.project-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.project-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    /* Fundo translúcido com gradiente roxo e blur para efeito fumaça */
-    background: linear-gradient(135deg, rgba(127, 0, 255, 0.3), rgba(63, 0, 127, 0.4));
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    
-    color: #fff;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-    transition: opacity 0.3s ease;
-    border-radius: 15px; /* mantém borda arredondada */
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden; /* impede que conteúdo extrapole o card */
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 300px;
+  background-color: #000; /* evita fundo branco antes da imagem carregar */
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(127, 0, 255, 0.6);
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(127, 0, 255, 0.6);
 }
 
-.project-card:hover img {
-    transform: scale(1.05);
+/* Imagem do projeto - sempre borrada e escurecida, sem mudança no hover */
+.project-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px) brightness(0.6);
+  user-select: none;
+  pointer-events: none;
+  transition: none; /* remove transições para filtro */
 }
 
-.project-card:hover .project-info {
-    opacity: 1;
+/* Informações do projeto - CORRIGIDO */
+.project-info {
+  position: absolute;
+  /* Faz o container ocupar todo o card */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Usa flexbox para centralizar o conteúdo (o h3) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color: white;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  pointer-events: none;
+  
+  text-shadow:
+    0 0 5px rgba(127, 0, 255, 0.9),
+    0 0 10px rgba(127, 0, 255, 0.7),
+    0 0 15px rgba(127, 0, 255, 0.5);
+  
+  padding: 0;
+  background: transparent;
+  border-radius: 12px;
 }
 
+
+/* Título do projeto sempre visível */
 .project-info h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.4rem;
+  margin: 0;
+  width: 100%;
+  text-align: center;
 }
 
-.project-info p {
-    margin: 0 0 20px 0;
-    font-size: 1rem;
-    line-height: 1.3;
+/* Descrição e botões inicialmente escondidos via opacity e max-height */
+.project-info p,
+.project-links {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
 }
 
-/* Ícone de clique (seta para a direita) */
-.project-info::after {
-    content: "➔";
-    font-size: 2rem;
-    color: #fff;
-    opacity: 0.8;
-    animation: bounce 1.5s infinite;
-    margin-top: 10px;
+/* No hover, posiciona a info no rodapé com fundo translúcido e mostra conteúdo */
+.project-card:hover .project-info {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  transform: none; /* Reset do transform que não usamos mais, mas bom manter */
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  font-size: 1rem;
+  pointer-events: auto;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(127, 0, 255, 0.7);
+  width: 100%;
+  height: auto; /* Altura auto no hover para se ajustar ao conteúdo */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
+  display: block; /* Muda para block para o conteúdo fluir verticalmente */
+  align-items: initial; /* Reseta o align-items */
+  justify-content: initial; /* Reseta o justify-content */
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-8px);
-    }
+/* Mostra descrição e botões no hover */
+.project-card:hover .project-info p,
+.project-card:hover .project-links {
+  opacity: 1;
+  max-height: 500px; /* valor alto o suficiente para mostrar todo conteúdo */
 }
 
+/* Botões dos projetos */
+.project-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px; /* Adicionado um espaço acima dos botões */
+}
+
+/* Estilo dos links/botões */
+.project-links a,
+.project-links span {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  user-select: none;
+  
+}
+
+/* Hover nos botões */
+.project-links a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(127, 0, 255, 0.7);
+}
+
+/* Estilo para spans (ex: "Em breve") */
+.project-links span {
+  background: #555;
+  cursor: default;
+}
+
+/* Botões lado a lado (se usar a classe) */
+.project-links.horizontal-buttons {
+  flex-direction: row;
+  gap: 10px;
+}
+
+.project-links.horizontal-buttons a {
+  min-width: 100px;
+}
+
+/* ===================== CONTACT SECTION ===================== */
 .contact-section {
   max-width: 600px;
   margin: 40px auto 80px auto;
@@ -438,6 +509,7 @@ body {
   box-shadow: 0 0 22px #9f4fff;
 }
 
+/* ===================== ABOUT ME SECTION ===================== */
 .about-me {
   max-width: 700px;
   margin: 40px auto 80px auto;
@@ -486,6 +558,7 @@ body {
   background-color: #9f4fff;
 }
 
+/* ===================== STARS BACKGROUND ===================== */
 /* Estrelas - containers das camadas */
 .stars {
   position: fixed; /* fixa na tela para parallax funcionar */
@@ -518,7 +591,6 @@ body {
   filter: drop-shadow(0 0 2px #aaa);
 }
 
-
 /* Cada estrela individual */
 .star {
   position: absolute;
@@ -548,13 +620,14 @@ body {
   animation-timing-function: ease-in-out; /* suavizar */
 }
 
+/* ===================== SPACESHIP ANIMATION ===================== */
 .spaceship {
   position: fixed;
   top: 20%; /* posição vertical, pode ajustar */
   left: -100px; /* começa fora da tela à esquerda */
   width: 80px;
   height: 80px;
-  background-image: url('/portfolio-do-alien/Imagens/ovni.png'); /* link de uma nave simples */
+  background-image: url('./Imagens/ovni.png'); /* link de uma nave simples */
   background-size: contain;
   background-repeat: no-repeat;
   animation: flyRight 25s linear infinite;
@@ -569,11 +642,47 @@ body {
   90% {
     opacity: 1;
   }
-  90% {
-    opacity: 1;
-  }
   100% {
     left: 110vw; /* sai da tela à direita */
     opacity: 0;
+  }
+}
+
+/* ===================== HERO CONTENT LAYOUT ===================== */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Pra não quebrar no celular */
+}
+
+.hero-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(127, 0, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(127, 0, 255, 0.8);
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-image img {
+    width: 140px;
+    height: 140px;
   }
 }
